@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>wechat-starter by goofansu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">wechat-starter</h1>
+      <h2 class="project-tagline">Template for developing wechat in rails.</h2>
+      <a href="https://github.com/goofansu/wechat-starter" class="btn">View on GitHub</a>
+      <a href="https://github.com/goofansu/wechat-starter/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/goofansu/wechat-starter/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="wechat-starter" class="anchor" href="#wechat-starter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>wechat-starter</h1>
+
+<p>Template for developing wechat in rails.</p>
+
+<h3>
+<a id="try" class="anchor" href="#try" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Try</h3>
+
+<p><img src="http://i.imgur.com/L8FBRGE.png" width="300"></p>
+
+<h3>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Screenshots</h3>
+
+<p><img src="http://i.imgur.com/oFs1AzQ.png" width="240">
+<img src="http://i.imgur.com/urwmWZv.png" width="240">
+<img src="http://i.imgur.com/UPw6FRc.png" width="240"></p>
+
+<h3>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h3>
+
+<ul>
+<li><p>Process messages with <a href="https://github.com/Eric-Guo/wechat">Eric-Guo/wechat</a></p></li>
+<li><p>Pay with <a href="https://github.com/jasl/wx_pay">jasl/wx_pay</a></p></li>
+<li><p>OAuth2 with <a href="https://github.com/skinnyworm/omniauth-wechat-oauth2">skinnyworm/omniauth-wechat-oauth2</a></p></li>
+</ul>
+
+<h3>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h3>
+
+<ul>
+<li><p>Mysql</p></li>
+<li><p>Configure "服务器地址" as <code>http://your-domain.com/wechat</code></p></li>
+<li><p>Configure "测试授权目录" as <code>http://your-domain.com/</code></p></li>
+</ul>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h3>
+
+<ul>
+<li>
+<p>Create your new project and add this repo as template</p>
+
+<pre><code>mkdir your_app
+cd your_app
+git init
+git remote add template https://github.com/goofansu/wechat-starter.git
+git fetch template
+git checkout -b master template/master
+bundle install
+rake db:create
+rake db:migrate
+</code></pre>
+</li>
+<li>
+<p>Create <code>config/application.yml</code> and config following information:</p>
+
+<div class="highlight highlight-source-yaml"><pre><span class="pl-s"><span class="pl-ent">wechat_app_id:</span> <span class="pl-s"><span class="pl-pds">"</span>AppID<span class="pl-pds">"</span></span></span>
+<span class="pl-s"><span class="pl-ent">wechat_secret:</span> <span class="pl-s"><span class="pl-pds">"</span>AppSecret<span class="pl-pds">"</span></span></span>
+<span class="pl-s"><span class="pl-ent">wechat_token:</span>  <span class="pl-s"><span class="pl-pds">"</span>Token<span class="pl-pds">"</span></span></span>
+<span class="pl-s"><span class="pl-ent">wechat_encoding_aes_key:</span> <span class="pl-s"><span class="pl-pds">"</span>EncodingAESKey<span class="pl-pds">"</span></span></span>
+
+<span class="pl-c"># following is optional if you don't need wechat pay</span>
+<span class="pl-s"><span class="pl-ent">wechat_pay_mch_id:</span> <span class="pl-s"><span class="pl-pds">"</span>merchant id<span class="pl-pds">"</span></span></span>
+<span class="pl-s"><span class="pl-ent">wechat_pay_api_key:</span> <span class="pl-s"><span class="pl-pds">"</span>32 bits api key configured in pay.weixin.qq.com<span class="pl-pds">"</span></span></span>
+<span class="pl-s"><span class="pl-ent">wechat_pay_notify_url:</span> <span class="pl-s"><span class="pl-pds">"</span>url to accept pay result notification<span class="pl-pds">"</span></span></span></pre></div>
+</li>
+<li>
+<p>Start server</p>
+
+<p><code>rails s</code></p>
+</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/goofansu/wechat-starter">wechat-starter</a> is maintained by <a href="https://github.com/goofansu">goofansu</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
